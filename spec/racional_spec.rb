@@ -13,9 +13,10 @@ describe Racional do
     @racional.respond_to?("numerador").should == true
   end
   
-#   it "Debe existir un denominador" do
-#   end
-#   
+  it "Debe existir un denominador" do
+    @racional.respond_to?("denominador").should == true
+  end
+  
 #   it "Debe de estar en su forma reducida" do
 #   end
 #   
