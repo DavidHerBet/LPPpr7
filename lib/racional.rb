@@ -57,4 +57,8 @@ class Racional
     Racional.new(num*o.denom+o.num*denom,denom*o.denom).mostrar_fraccion
   end
   
+  def -(o)
+    Racional.new(num*o.denom-o.num*denom,denom*o.denom).mostrar_fraccion
+  end
+  
 end

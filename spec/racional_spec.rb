@@ -64,9 +64,11 @@ describe Racional do
     (@racional+fraccion2).should == '17/10'
   end
   
-#   it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
-#   end
-#   
+  it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
+    fraccion2 = Racional.new(6,5)
+    (@racional-fraccion2).should == '-7/10'
+  end
+  
 #   it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
 #   end
 #   
