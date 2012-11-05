@@ -22,9 +22,10 @@ describe Racional do
     @racional.denominador.should == 2
   end
   
-#   it "Se debe invocar al metodo num() para obtener el numerador" do
-#   end
-#   
+  it "Se debe invocar al metodo num() para obtener el numerador" do
+    @racional.respond_to?("num").should == true
+  end
+  
 #   it "Se debe invocar al metodo denom() para obtener el denominador" do
 #   end
 #   

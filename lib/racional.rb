@@ -16,4 +16,8 @@ class Racional
   
   attr_reader :numerador, :denominador
   
+  def num
+    @numerador
+  end
+  
 end
