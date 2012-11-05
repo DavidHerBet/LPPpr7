@@ -24,4 +24,8 @@ class Racional
     @denominador
   end
   
+  def mostrar
+    "#{num}/#{denom}"
+  end
+  
 end
