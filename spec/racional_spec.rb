@@ -88,21 +88,21 @@ describe Racional do
     fraccion2 = Racional.new(6,5)
     (@racional<fraccion2).should == true
   end
-#   
-#   it "Se debe de poder comprobar si una fracion es mayor que otra" do
-#     fraccion2 = Racional.new(6,5)
-#     (@racional>fraccion2).should == false
-#   end
-#   
-#   it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
-#     fraccion2 = Racional.new(6,5)
-#     (@racional<=fraccion2).should == true
-#   end
-#   
-#   it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
-#     fraccion2 = Racional.new(6,5)
-#     (@racional>=fraccion2).should == false
-#   end
+  
+  it "Se debe de poder comprobar si una fracion es mayor que otra" do
+    fraccion2 = Racional.new(6,5)
+    (@racional>fraccion2).should == false
+  end
+  
+  it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
+    fraccion2 = Racional.new(6,5)
+    (@racional<=fraccion2).should == true
+  end
+  
+  it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
+    fraccion2 = Racional.new(6,5)
+    (@racional>=fraccion2).should == false
+  end
   
   
 
