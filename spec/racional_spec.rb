@@ -84,10 +84,10 @@ describe Racional do
     (@racional%fraccion2).should == '1/1'
   end
   
-#   it "Se debe de poder comprobar si una fracion es menor que otra" do
-#     fraccion2 = Racional.new(6,5)
-#     (@racional<fraccion2).should == true
-#   end
+  it "Se debe de poder comprobar si una fracion es menor que otra" do
+    fraccion2 = Racional.new(6,5)
+    (@racional<fraccion2).should == true
+  end
 #   
 #   it "Se debe de poder comprobar si una fracion es mayor que otra" do
 #     fraccion2 = Racional.new(6,5)

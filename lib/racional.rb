@@ -74,9 +74,9 @@ class Racional
     Racional.new(num%denom, o.num%o.denom).mostrar_fraccion
   end
   
-#   def <=>(o)
-#     return nil unless o.instance_of? Racional
-#     (num and denom) <=> (o.num and o.denom)
-#   end
+  def <=>(o)
+    return nil unless o.instance_of? Racional
+    (num and denom) <=> (o.num and o.denom)
+  end
   
 end
