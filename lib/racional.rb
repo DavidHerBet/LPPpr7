@@ -45,5 +45,8 @@ class Racional
     (num.to_f/denom).abs
   end
   
+  def reciprocal
+    "#{denom}/#{num}"
+  end
   
 end

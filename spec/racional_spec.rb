@@ -49,10 +49,12 @@ describe Racional do
     fraccion2 = Racional.new(-1,2)
     fraccion2.abs.should == 0.5
   end
-#   
-#   it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
-#   end
-#   
+  
+  it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
+    @racional.respond_to?("reciprocal").should == true
+    @racional.reciprocal == '2/1'
+  end
+  
 #   it "Se debe calcular el opuesto de una fraccion con -" do
 #   end
 #   
