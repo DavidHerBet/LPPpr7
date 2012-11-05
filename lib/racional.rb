@@ -70,9 +70,9 @@ class Racional
     Racional.new(num*o.denom,denom*o.num).mostrar_fraccion
   end
   
-#   def %(o)
-#     Racional.new(num%denom, o.num%o.denom).mostrar_fraccion
-#   end
+  def %(o)
+    Racional.new(num%denom, o.num%o.denom).mostrar_fraccion
+  end
   
 #   def <=>(o)
 #     return nil unless o.instance_of? Racional
