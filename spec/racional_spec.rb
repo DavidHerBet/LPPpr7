@@ -55,9 +55,10 @@ describe Racional do
     @racional.reciprocal == '2/1'
   end
   
-#   it "Se debe calcular el opuesto de una fraccion con -" do
-#   end
-#   
+  it "Se debe calcular el opuesto de una fraccion con -" do
+    (-@racional).should == '-2/1'
+  end
+  
 #   it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
 #   end
 #   

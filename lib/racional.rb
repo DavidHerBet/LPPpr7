@@ -49,4 +49,8 @@ class Racional
     "#{denom}/#{num}"
   end
   
+  def -@
+    "-#{denom}/#{num}"
+  end
+  
 end
