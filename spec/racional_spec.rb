@@ -45,8 +45,10 @@ describe Racional do
     (@racional==fraccion2).should == true
   end
 
-#   it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
-#   end
+  it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+    fraccion2 = Racional.new(-1,2)
+    fraccion2.abs.should == 0.5
+  end
 #   
 #   it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
 #   end

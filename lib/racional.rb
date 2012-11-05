@@ -39,7 +39,11 @@ class Racional
     rescue
       false
     end
-    
   end
+  
+  def abs
+    (num.to_f/denom).abs
+  end
+  
   
 end
