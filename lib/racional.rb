@@ -24,8 +24,12 @@ class Racional
     @denominador
   end
   
-  def mostrar
+  def mostrar_fraccion
     "#{num}/#{denom}"
+  end
+  
+  def mostrar_flotante
+    num.to_f/denom
   end
   
 end

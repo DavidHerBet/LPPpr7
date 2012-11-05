@@ -31,12 +31,14 @@ describe Racional do
   end
   
   it "Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
-    @racional.respond_to?("mostrar").should == true
-    @racional.mostrar.should == '1/2'
+    @racional.respond_to?("mostrar_fraccion").should == true
+    @racional.mostrar_fraccion.should == '1/2'
   end
   
-#   it "Se debe mostar por la consola la fraccion en formato flotante" do
-#   end
+  it "Se debe mostar por la consola la fraccion en formato flotante" do
+    @racional.respond_to?("mostrar_flotante").should == true
+    @racional.mostrar_flotante.should == 0.5
+  end
 #   
 #   it "Se debe comparar si dos fracciones son iguales con ==" do
 #   end
