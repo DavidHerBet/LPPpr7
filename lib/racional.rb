@@ -20,4 +20,8 @@ class Racional
     @numerador
   end
   
+  def denom
+    @denominador
+  end
+  
 end

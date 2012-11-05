@@ -26,9 +26,10 @@ describe Racional do
     @racional.respond_to?("num").should == true
   end
   
-#   it "Se debe invocar al metodo denom() para obtener el denominador" do
-#   end
-#   
+  it "Se debe invocar al metodo denom() para obtener el denominador" do
+    @racional.respond_to?("denom").should == true
+  end
+  
 #   it "Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
 #   end
 #   
