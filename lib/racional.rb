@@ -2,6 +2,8 @@
 
 class Racional
 
+  include Comparable
+  
   def initialize(num, den)
     div = mcd(num, den)
     @numerador = num/div
@@ -12,7 +14,6 @@ class Racional
     return a if b == 0
     mcd(b, a%b)
   end
-  
   
   attr_reader :numerador, :denominador
   
@@ -34,7 +35,7 @@ class Racional
   
   def ==(o)
     begin
-      return ((num == o.num) and (denom == o.denom)) if o.instance_of?Racional
+      return ((num == o.num) and (denom == o.denom)) if o.instance_of? Racional
       false
     rescue
       false
@@ -64,5 +65,18 @@ class Racional
   def *(o)
     Racional.new(num*o.num,denom*o.denom).mostrar_fraccion
   end
+  
+  def /(o)
+    Racional.new(num*o.denom,denom*o.num).mostrar_fraccion
+  end
+  
+#   def %(o)
+#     Racional.new(num%denom, o.num%o.denom).mostrar_fraccion
+#   end
+  
+#   def <=>(o)
+#     return nil unless o.instance_of? Racional
+#     (num and denom) <=> (o.num and o.denom)
+#   end
   
 end

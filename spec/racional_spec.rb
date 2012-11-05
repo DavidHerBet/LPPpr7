@@ -74,22 +74,34 @@ describe Racional do
     (@racional*fraccion2).should == '3/5'
   end
   
-#   it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
-#   end
-#   
+  it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
+    fraccion2 = Racional.new(6,5)
+    (@racional/fraccion2).should == '5/12'
+  end
+  
 #   it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
+#     fraccion2 = Racional.new(6,5)
+#     (@racional%fraccion2).should == '1/1'
 #   end
-#   
+  
 #   it "Se debe de poder comprobar si una fracion es menor que otra" do
+#     fraccion2 = Racional.new(6,5)
+#     (@racional<fraccion2).should == true
 #   end
 #   
 #   it "Se debe de poder comprobar si una fracion es mayor que otra" do
+#     fraccion2 = Racional.new(6,5)
+#     (@racional>fraccion2).should == false
 #   end
 #   
 #   it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
+#     fraccion2 = Racional.new(6,5)
+#     (@racional<=fraccion2).should == true
 #   end
 #   
 #   it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
+#     fraccion2 = Racional.new(6,5)
+#     (@racional>=fraccion2).should == false
 #   end
   
   
