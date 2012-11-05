@@ -32,4 +32,14 @@ class Racional
     num.to_f/denom
   end
   
+  def ==(o)
+    begin
+      return ((num == o.num) and (denom == o.denom)) if o.instance_of?Racional
+      false
+    rescue
+      false
+    end
+    
+  end
+  
 end

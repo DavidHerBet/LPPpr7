@@ -39,10 +39,12 @@ describe Racional do
     @racional.respond_to?("mostrar_flotante").should == true
     @racional.mostrar_flotante.should == 0.5
   end
-#   
-#   it "Se debe comparar si dos fracciones son iguales con ==" do
-#   end
-#   
+  
+  it "Se debe comparar si dos fracciones son iguales con ==" do
+    fraccion2 = Racional.new(10, 20)
+    (@racional==fraccion2).should == true
+  end
+
 #   it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
 #   end
 #   
