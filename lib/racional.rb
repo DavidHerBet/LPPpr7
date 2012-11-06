@@ -76,7 +76,7 @@ class Racional
   
   def <=>(o)
     return nil unless o.instance_of? Racional
-    (num and denom) <=> (o.num and o.denom)
+    (num / denom) <=> (o.num / o.denom)
   end
   
 end
