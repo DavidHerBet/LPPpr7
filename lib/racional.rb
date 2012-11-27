@@ -19,11 +19,11 @@ class Racional
   attr_reader :num, :denom
   
   def to_s
-    "#{@num}/#{@denom}"
+    "#{num}/#{denom}"
   end
   
   def to_f
-    @num.to_f/@denom
+    num.to_f/denom
   end
   
   def ==(o)
@@ -36,15 +36,15 @@ class Racional
   end
   
   def abs
-    Racional.new(@num.abs, @denom.abs)
+    Racional.new(num.abs, denom.abs)
   end
   
   def reciprocal
-    Racional.new(@denom, @num)
+    Racional.new(denom, num)
   end
   
   def -@
-    Racional.new(-@denom, @num)
+    Racional.new(-denom, num)
   end
   
   def +(o)
