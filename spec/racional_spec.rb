@@ -10,16 +10,15 @@ describe Racional do
   end
   
   it "Debe existir un numerador" do
-    @racional.respond_to?("numerador").should == true
+    @racional.num.should == 1
   end
   
   it "Debe existir un denominador" do
-    @racional.respond_to?("denominador").should == true
+    @racional.denom.should == 2
   end
   
   it "Debe de estar en su forma reducida" do
-    @racional.numerador.should == 1
-    @racional.denominador.should == 2
+    @racional.should == Racional.new(1,2)
   end
   
   it "Se debe invocar al metodo num() para obtener el numerador" do
@@ -31,77 +30,63 @@ describe Racional do
   end
   
   it "Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
-    @racional.respond_to?("mostrar_fraccion").should == true
-    @racional.mostrar_fraccion.should == '1/2'
+    @racional.to_s.should == "1/2"
   end
   
   it "Se debe mostar por la consola la fraccion en formato flotante" do
-    @racional.respond_to?("mostrar_flotante").should == true
-    @racional.mostrar_flotante.should == 0.5
+    @racional.to_f.should == 1.to_f/2
   end
   
   it "Se debe comparar si dos fracciones son iguales con ==" do
-    fraccion2 = Racional.new(10, 20)
-    (@racional==fraccion2).should == true
+    @racional.should == Racional.new(10, 20)
   end
 
   it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
-    fraccion2 = Racional.new(-1,2)
-    fraccion2.abs.should == 0.5
+    Racional.new(-1,2).abs.should == @racional
   end
   
   it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
-    @racional.respond_to?("reciprocal").should == true
-    @racional.reciprocal == '2/1'
+    @racional.reciprocal.should == Racional.new(2,1)
   end
   
   it "Se debe calcular el opuesto de una fraccion con -" do
-    (-@racional).should == '-2/1'
+    (-@racional).should == Racional.new(-2,1)
   end
   
   it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
-    fraccion2 = Racional.new(6,5)
-    (@racional+fraccion2).should == '17/10'
+    (@racional + Racional.new(6,5)).should == Racional.new(17,10)
   end
   
   it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
-    fraccion2 = Racional.new(6,5)
-    (@racional-fraccion2).should == '-7/10'
+    (@racional - Racional.new(6,5)).should == Racional.new(-7,10)
   end
   
   it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida" do
-    fraccion2 = Racional.new(6,5)
-    (@racional*fraccion2).should == '3/5'
+    (@racional * Racional.new(6,5)).should == Racional.new(3,5)
   end
   
   it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
-    fraccion2 = Racional.new(6,5)
-    (@racional/fraccion2).should == '5/12'
+    (@racional / Racional.new(6,5)).should == Racional.new(5,12)
   end
   
   it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida" do
-    fraccion2 = Racional.new(6,5)
-    (@racional%fraccion2).should == '1/1'
+    (@racional % Racional.new(6,5)).should == Racional.new(1,1)
   end
   
   it "Se debe de poder comprobar si una fracion es menor que otra" do
-    fraccion2 = Racional.new(6,5)
-    (@racional<fraccion2).should == true
+    (@racional < Racional.new(6,5)).should == true
   end
   
   it "Se debe de poder comprobar si una fracion es mayor que otra" do
-    fraccion2 = Racional.new(6,5)
-    (@racional>fraccion2).should == false
+    (@racional > Racional.new(6,5)).should == false
   end
   
   it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
-    fraccion2 = Racional.new(6,5)
-    (@racional<=fraccion2).should == true
+    (@racional <= Racional.new(6,5)).should == true
   end
   
   it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
-    fraccion2 = Racional.new(6,5)
-    (@racional>=fraccion2).should == false
+    (@racional >= Racional.new(6,5)).should == false
   end
   
   

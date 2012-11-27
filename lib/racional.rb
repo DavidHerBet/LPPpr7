@@ -4,33 +4,26 @@ class Racional
 
   include Comparable
   
-  def initialize(num, den)
-    div = mcd(num, den)
-    @numerador = num/div
-    @denominador = den/div
+  def initialize(num, denom)
+    raise TypeError, "El denominador debe ser mayor que cero" unless (denom != 0)
+    div = mcd(num, denom)
+    @num = num/div
+    @denom = denom/div
   end
 
   def mcd(a,b)
     return a if b == 0
-    mcd(b, a%b)
+    mcd(b, a % b)
   end
   
-  attr_reader :numerador, :denominador
+  attr_reader :num, :denom
   
-  def num
-    @numerador
+  def to_s
+    "#{@num}/#{@denom}"
   end
   
-  def denom
-    @denominador
-  end
-  
-  def mostrar_fraccion
-    "#{num}/#{denom}"
-  end
-  
-  def mostrar_flotante
-    num.to_f/denom
+  def to_f
+    @num.to_f/@denom
   end
   
   def ==(o)
@@ -43,40 +36,40 @@ class Racional
   end
   
   def abs
-    (num.to_f/denom).abs
+    Racional.new(@num.abs, @denom.abs)
   end
   
   def reciprocal
-    "#{denom}/#{num}"
+    Racional.new(@denom, @num)
   end
   
   def -@
-    "-#{denom}/#{num}"
+    Racional.new(-@denom, @num)
   end
   
   def +(o)
-    Racional.new(num*o.denom+o.num*denom,denom*o.denom).mostrar_fraccion
+    Racional.new(num*o.denom + o.num*denom, denom*o.denom)
   end
   
   def -(o)
-    Racional.new(num*o.denom-o.num*denom,denom*o.denom).mostrar_fraccion
+    Racional.new(num*o.denom - o.num*denom, denom*o.denom)
   end
   
   def *(o)
-    Racional.new(num*o.num,denom*o.denom).mostrar_fraccion
+    Racional.new(num*o.num,denom*o.denom)
   end
   
   def /(o)
-    Racional.new(num*o.denom,denom*o.num).mostrar_fraccion
+    Racional.new(num*o.denom,denom*o.num)
   end
   
   def %(o)
-    Racional.new(num%denom, o.num%o.denom).mostrar_fraccion
+    Racional.new(num%denom, o.num%o.denom)
   end
   
   def <=>(o)
     return nil unless o.instance_of? Racional
-    (num / denom) <=> (o.num / o.denom)
+    (num.to_f / denom) <=> (o.num.to_f / o.denom)
   end
   
 end
